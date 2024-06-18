@@ -29,5 +29,11 @@ Resource Usage: VMs require more resources (CPU, memory, storage) because each V
 - Flexibility: VMs can run different operating systems on the same hardware, providing more flexibility for certain use cases.
 - Management: Hypervisors like VMware, Hyper-V, and KVM are used to manage VMs, which can be more complex than managing containers.
 
+- Docker file :
+- This is the file contain the instructions for docker that we want to execute when we build our own image. 
+
+- Container file system: 
+- Every container based on an image has it's own internal file system which is totally isolated from our external file system on our machine.   
+
 
 
