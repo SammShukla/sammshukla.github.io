@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker_And_Containers 13/06/2024
+title: Docker-And-Containers 13/06/2024
 ---
 
 # DOCKER & CONTAINERS:
@@ -32,8 +32,49 @@ Resource Usage: VMs require more resources (CPU, memory, storage) because each V
 - Docker file :
 - This is the file contain the instructions for docker that we want to execute when we build our own image. 
 
-- Container file system: 
-- Every container based on an image has it's own internal file system which is totally isolated from our external file system on our machine.   
+- CONTAINER FILE SSYSTEM: 
+- Every container based on an image has it's own internal file system which is totally isolated from our external file system on our machine.
+- Docker Directory Structure Overview:
+- Docker Root Directory (/var/lib/docker/):
+
+- This is the primary directory where Docker stores all of its data.
+- /var/lib/docker/containers/: Contains directories for each running or stopped Docker container. Each container has its own directory named with a unique identifier.
+- /var/lib/docker/volumes/: Stores Docker volumes. Each volume gets a directory here.
+- /var/lib/docker/image/: Contains Docker images and their layers.
+- /var/lib/docker/network/: Holds network related information for Docker.
+- /var/lib/docker/tmp/: Temporary files used by Docker.
+
+- DOCKER CONFIGURATION FILES:
+
+- /etc/docker/: Configuration files for Docker daemon.
+	
+- DOCKER BRIDGE:
+
+- In Docker, a bridge is a virtual network interface that connects Docker containers to the host system and enables communication between them. Here are some key points about Docker bridge networks:
+
+- Default Network Mode: When you install Docker, it creates a default bridge network named bridge. Containers that are launched without specifying a different network will connect to this bridge by default.
+
+- Internal IP Addressing: Each container connected to a bridge network gets its own unique IP address from the subnet defined for that bridge. This allows containers to communicate with each other and with the host machine over the network.
+
+- NAT (Network Address Translation): The bridge network uses NAT to provide outbound internet connectivity for containers. This means containers can access resources outside of the Docker host by using the host's IP address.
+
+- Isolation: By default, containers connected to the same bridge network can communicate with each other, but they are isolated from containers in other bridge networks unless explicitly connected through other means (like creating shared networks or using other Docker network types).
+
+- Custom Bridge Networks: Docker allows you to create custom bridge networks with specific configurations such as subnet ranges, gateway settings, and other options. This can help in managing container networking more efficiently and securely, especially in complex environments.
+
+- DOCKER VOLUME:
+
+- A Docker volume is a specially designated directory within one or more Docker containers that exists outside of the typical Union File System. It is used for persistent storage and enables data to persist beyond the life cycle of a single container. Docker volumes are separate from the container's file system and are intended to store and manage persistent or shared data generated or used by Docker containers.
+
+- Key characteristics of Docker volumes include:
+
+- Persistence: Data stored in a volume persists even if the container that created it stops or is deleted.
+
+- Shared Access: Volumes can be shared and accessed by multiple containers, making them suitable for scenarios where data needs to be shared or accessed by different services.
+
+- Separation from Container Lifespan: Volumes exist independently of containers, allowing data to persist across container restarts, upgrades, or removals.
+
+- Docker volumes are essential for applications that require persistent storage, such as databases, content management systems, or any application where preserving data between container runs is necessary. They provide a convenient way to manage and backup data while maintaining separation from the container's execution environment.   
 
 
 
