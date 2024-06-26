@@ -71,4 +71,12 @@ echo 'Hello\'             # Output: Hello\
 - echo 'Due to SVIRUS virus company have lost $9 million.'
 - output - Due to $VIRUS virus company have lost $9 million. > in this case, single quote removed the sspecial charactor meaning.
 - echo "Dun to $VIRUS virus company have lost \$9 million."
-- output - Due to covidi9 virus company have lost $9 million. > in this case, backward slash(\) removed the special charactor meaning of $9 and print that as it is.(otherwise it would have printed 9th cmd-line argument.)
+- output - Due to covidi9 virus company have lost $9 million. > in this case, backward slash(\) removed the special charactor meaning of $9 and print that as it is.(otherwise it would have printed 9th cmd-line argument.).
+
+# COMMAND SUBSTITUTION :
+
+- Variable defined in the script leave with it and dies after the script dies or completes. If we want to define a variable that is accessible to all the scripts from your current shell we need to export it.
+- It basically takes the output of a command and stores it into a variable. We can achieve this by using 'backticks' or '$()'.
+
+- example : if we take command 'uptime' and stores in a variable CMD with backticks or $(), for example - CMD=`uptime` or CMD=$(uptime) 
+- And if we run command echo $CMD then it well print the output of command 'uptime'. 
