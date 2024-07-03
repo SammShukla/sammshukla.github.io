@@ -129,5 +129,43 @@ There are two main types of Docker volumes for persistent storage:
 - Init Containers: Containers that run before the main application container to set up the environment, such as initializing a database or configuring a network.
 - Utility containers provide a modular, flexible, and efficient way to manage auxiliary tasks in Docker environments, enhancing the overall functionality, security, and maintainability of application or service.   
 
+- DOCKER COMPOSE :
+
+- Docker Compose is a tool for defining and running multi-container Docker applications. With Docker Compose, you can use a YAML file to configure your application's services, networks, and volumes, and then create and start all the services from your configuration with a single command.
+
+- HOW TO USE DOCKER COMPOSE :
+
+- 1. Install Docker and Docker Compose :
+- First, make sure you have Docker and Docker Compose installed. You can check their versions using the following commands:
+
+- docker --version
+- docker-compose --version
+
+- 2. Create a docker-compose.yml File :
+- Create a docker-compose.yml file in your project directory. This file defines the services that make up your application. Here’s an example of a simple docker-compose.yml file:
+
+- version: '3.8'
+
+- services:
+  - web:
+    - image: nginx:latest
+    - ports:
+      - "80:80"
+  - db:
+    - image: postgres:latest
+    - environment:
+      - POSTGRES_PASSWORD: example
+
+- 3. Run Docker Compose: To start the services defined in your docker-compose.yml file, use the following command 'docker-compose up'.
+- This command builds, (re)creates, starts, and attaches to containers for a service. If you want to run the services in the background, add the -d flag: docker-compose up -d
+
+- 4. Managing Containers: You can manage your Docker Compose services with various commands:
+
+- Stop services: docker-compose stop
+- Start services: docker-compose start
+- Restart services: docker-compose restart
+- Stop and remove containers, networks, images, and volumes: docker-compose down
+
+- 5. Viewing Logs: You can view the logs from all services by using 'docker-compose logs'.
 
 
