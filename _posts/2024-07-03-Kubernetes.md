@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux fundamntals 10/06/2024
+title: Kubernetes 03/07/2024
 ---
 
 
