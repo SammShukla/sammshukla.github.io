@@ -156,6 +156,9 @@ There are two main types of Docker volumes for persistent storage:
     - environment:
       - POSTGRES_PASSWORD: example
 
+
+
+
 - 3. Run Docker Compose: To start the services defined in your docker-compose.yml file, use the following command 'docker-compose up'.
 - This command builds, (re)creates, starts, and attaches to containers for a service. If you want to run the services in the background, add the -d flag: docker-compose up -d
 
