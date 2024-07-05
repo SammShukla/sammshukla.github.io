@@ -49,83 +49,83 @@ title: Openstack 05/07/2024
 - Example of Using IaaS:
 - A company might use IaaS to host its websites and applications. Instead of purchasing and maintaining physical servers, the company can rent virtual servers from an IaaS provider. The company pays only for the resources it uses and can easily scale its infrastructure as its needs grow or shrink. This setup allows the company to focus on developing and improving its applications rather than managing physical hardware.
 
-# Openstack :
+# Openstack:
 
 - OpenStack is a prominent open-source cloud computing platform that provides infrastructure as a service (IaaS) for both public and private clouds. It was launched in 2010 as a joint project by Rackspace Hosting and NASA and has since grown into a large community-driven project with contributions from various organizations and individual developers worldwide.
 
-- ARCHITECTURE:
+# Architecture:
 
 - OpenStack's architecture is modular and follows a layered approach, allowing each component to operate independently while communicating through well-defined APIs. This modular design provides flexibility, scalability, and extensibility, making it suitable for diverse cloud computing environments.
 
-- 1. Compute (Nova):
+ - Compute (Nova):
 
 - Purpose: Manages the lifecycle of virtual machines (VMs) and supports various hypervisors such as KVM, VMware, and Hyper-V.
 - Features: Provides APIs for provisioning and managing compute resources, including instances, images, and flavors (resource configurations).
 
 # Storage:
 
-- 2. Swift (Object Storage):
+ - Swift (Object Storage):
 
 - Purpose: Designed for storing and retrieving large amounts of unstructured data, such as media files, backups, and archives.
 - Features: Offers high scalability and durability with data replication and distribution across multiple storage nodes.
 
-- 3. Cinder (Block Storage):
+ - Cinder (Block Storage):
 
 - Purpose: Provides persistent block storage volumes to VMs, supporting features like snapshots, cloning, and volume types.
 - Features: Integrates with various backend storage technologies (e.g., LVM, Ceph) to offer flexibility in storage provisioning.
 
 
-# Networking 
+# Networking: 
 
-- 4. Neutron :
+ - Neutron :
 
 - Purpose: Manages network connectivity as a service (NaaS), providing virtual networks, routers, and IP addresses to VMs.
 - Features: Supports various networking plugins (e.g., ML2, OVN) for different network architectures, including VLANs, VXLANs, and SDN integrations.
 
 
-# Dashboard 
+# Dashboard: 
 
-- 5. Horizon :
+ - Horizon :
 
 - Purpose: Provides a web-based graphical interface for administrators and users to manage and monitor OpenStack resources.
 - Features: Offers dashboards for various services, enabling users to perform actions such as launching instances, managing networks, and viewing usage statistics.
 
 
-# Identity Service 
+# Identity Service: 
 
-- 6. Keystone :
+ - Keystone :
 
 - Purpose: Provides authentication and authorization services across all OpenStack services.
 - Features: Supports multiple authentication methods (e.g., username/password, token-based), role-based access control (RBAC), and federation with external identity providers.
 
 
-# Image Service 
+# Image Service: 
 
-- 7. Glance :
+ - Glance :
 
 - Purpose: Manages virtual machine images used for instance provisioning.
 - Features: Provides APIs for discovering, registering, and retrieving images, supporting various image formats (e.g., QCOW2, VMDK).
 
 
-Orchestration 
+# Orchestration: 
 
-- 8. Heat :
+ - Heat :
 
 - Purpose: Allows users to describe and automate the deployment of cloud applications and resources using templates (e.g., AWS CloudFormation-compatible).
 - Features: Supports resource orchestration across multiple OpenStack services, enabling complex application deployments and scaling.
 
 
-# Telemetry 
+# Telemetry: 
 
-- 9. Ceilometer :
+ - Ceilometer :
 
 - Purpose: Collects and stores metering data (e.g., CPU usage, network traffic) for billing, monitoring, and performance analysis.
 - Features: Integrates with various data storage backends (e.g., MongoDB, SQL databases) and supports alarms and notifications based on predefined thresholds.
 
 
-# Database Service 
+# Database Service: 
 
-- 10. Trove :
+ - Trove :
 
 - Purpose: Provides database as a service (DBaaS), allowing users to provision and manage relational database instances (e.g., MySQL, PostgreSQL) in the cloud.
 - Features: Automates database provisioning, backups, scaling, and management tasks, enhancing developer productivity and operational efficiency.
