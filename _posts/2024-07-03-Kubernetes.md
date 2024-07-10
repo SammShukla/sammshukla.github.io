@@ -80,4 +80,6 @@ and then install the Kubernetes software on those machines - of course you also 
 manage permissions etc. Unless you have tons of Linux and server administration experience, you might not want to do
 that - thankfully, there are tools and managed services which simplify the creation of a Kubernetes Cluster (learn more in the "Kubernetes Deployment" section).
 Once the Cluster is up and running, Kubernetes will create, run, stop and manage Containers for you.
-- It does that in so-called "Pods" - which are the smalles unit in the Kubernetes world. A Pod simply contains one or more Container (typically one though) and any configuration as well as volumes required by the Container(s). With Kubernetes, you don't manage Containers but rather Pods which then manage the Containers - more on that in the next course section
+- It does that in so-called "Pods" - which are the smalles unit in the Kubernetes world. A Pod simply contains one or more Container (typically one though) and any configuration as well as volumes required by the Container(s). With Kubernetes, you don't manage Containers but rather Pods which then manage the Containers.
+
+# Minikube :
