@@ -175,6 +175,6 @@ title: Openstack 05/07/2024
 
 - OpenStack continues to evolve as a leading open-source cloud computing platform, offering organizations the flexibility, scalability, and control needed to build and manage cloud infrastructure across various deployment models. By understanding its architecture, components, features, use cases, community dynamics, and potential challenges, organizations can make informed decisions and harness the full potential of OpenStack for their cloud computing needs.
 
-
+- ARCHITECTURE
 
 
