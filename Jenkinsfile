@@ -2,35 +2,44 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout') {
+        stage('Initialization') {
             steps {
-                echo 'Checking out code...'
-                // You can use git step to checkout code
-                // git branch: 'main', url: 'https://github.com/your-repo.git'
+                echo 'Pipeline initialized.'
+                // Simulate some environment setup
+                sh 'echo "Setting up environment variables"'
+                sh 'env'
             }
         }
 
-        stage('Build') {
+        stage('Build Simulation') {
             steps {
-                echo 'Building project...'
-                // Replace this with actual build commands, e.g., for a Maven project
-                // sh 'mvn clean package'
+                echo 'Simulating build process...'
+                // Simulate a build process with a dummy command
+                sh 'echo "Building project..."'
+                // Add a sleep to simulate time taken by a real build
+                sh 'sleep 3'
+                echo 'Build complete.'
             }
         }
 
-        stage('Test') {
+        stage('Test Simulation') {
             steps {
-                echo 'Running tests...'
-                // Replace this with actual test commands, e.g., for a Maven project
-                // sh 'mvn test'
+                echo 'Simulating test execution...'
+                // Simulate test execution
+                sh 'echo "Running tests..."'
+                // Simulate a passing test
+                sh 'sleep 2 && echo "Tests passed!"'
             }
         }
 
-        stage('Deploy') {
+        stage('Deployment Simulation') {
             steps {
-                echo 'Deploying to environment...'
-                // Add your deployment scripts/commands here
-                // sh './deploy.sh'
+                echo 'Simulating deployment...'
+                // Simulate a deployment step
+                sh 'echo "Deploying application..."'
+                // Simulate a delay to represent deployment
+                sh 'sleep 2'
+                echo 'Deployment complete.'
             }
         }
     }
@@ -38,14 +47,17 @@ pipeline {
     post {
         always {
             echo 'Cleaning up...'
-            // Example: cleanup workspace
-            // deleteDir()
+            // Simulate workspace cleanup
+            sh 'echo "Workspace cleanup..."'
         }
         success {
             echo 'Pipeline succeeded!'
+            sh 'echo "Pipeline executed successfully!"'
         }
         failure {
             echo 'Pipeline failed.'
+            sh 'echo "Pipeline encountered an error."'
         }
     }
 }
+
